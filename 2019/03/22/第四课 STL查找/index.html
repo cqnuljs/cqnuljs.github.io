@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="大河之剑天上来">
 <meta property="og:description" content="教学内容STL的三种查找算法； STL其他常用函数；">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-22T18:08:18.640Z">
+<meta property="og:updated_time" content="2019-03-22T18:10:19.311Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第四课 STL查找">
 <meta name="twitter:description" content="教学内容STL的三种查找算法； STL其他常用函数；">
@@ -414,7 +414,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-23 02:08:18" itemprop="dateModified" datetime="2019-03-23T02:08:18+08:00">2019-03-23</time>
+                <time title="修改时间：2019-03-23 02:10:19" itemprop="dateModified" datetime="2019-03-23T02:10:19+08:00">2019-03-23</time>
               
             
           </span>
@@ -482,7 +482,7 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">8</span>] = &#123; <span class="number">-9</span>, <span class="number">5</span>, <span class="number">-1</span>, <span class="number">2</span>, <span class="number">7</span>, <span class="number">1</span>, <span class="number">-2</span>, <span class="number">2</span> &#125;, n = <span class="number">8</span>;</span><br><span class="line"></span><br><span class="line">sort(a, a + n);</span><br><span class="line"></span><br><span class="line"><span class="comment">// a = &#123; -9, -2, -1, 1, 2, 2, 5, 7 &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> *p1 = <span class="built_in">std</span>::lower_bound(a, a + n, <span class="number">1</span>);</span><br><span class="line"><span class="comment">// p1 指向 a 中第 4 个元素 a[3] = 1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> *p2 = lower_bound(a, a + n, <span class="number">2</span>);</span><br><span class="line"><span class="comment">// p2 指向 a 中第 5 个元素 a[4] = 2</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> *p3 = upper_bound(a, a + n, <span class="number">2</span>);</span><br><span class="line"><span class="comment">// p3 指向 a 中第 7 个元素 a[6] = 5</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> *p4 = lower_bound(a, a + n, <span class="number">8</span>);</span><br><span class="line"><span class="comment">// p4 = a + n，因为数组 a 中没有不小于 8 的元素，此时访问 *p4 会越界</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">bool</span> flag = binary_search(a, a + n, <span class="number">3</span>);</span><br><span class="line"><span class="comment">// flag = false 因为数组 a 中没有 3</span></span><br></pre></td></tr></table></figure>
 <h1 id="STL交换函数"><a href="#STL交换函数" class="headerlink" title="STL交换函数"></a>STL交换函数</h1><p>使用 <code>swap</code>函数交换两个变量的值。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">-1</span>, b = <span class="number">1</span>;</span><br><span class="line">swap(a, b);</span><br><span class="line"></span><br><span class="line"><span class="comment">// a = 1, b = -1</span></span><br></pre></td></tr></table></figure>
-<h1 id="STL较大、较小值"><a href="#STL较大、较小值" class="headerlink" title="STL较大、较小值"></a>STL较大、较小值</h1><p>使用 max 和 min 来取得两个数中较大或较小的。</p>
+<h1 id="STL较大、较小值"><a href="#STL较大、较小值" class="headerlink" title="STL较大、较小值"></a>STL较大、较小值</h1><p>使用<code>max</code> 和 min 来取得两个数中较大或较小的。</p>
 <pre><code class="lang-cpp">int a = -1, b = 890;
 x = max(a, b); // 结果为 890
 y = min(a, b); // 结果为 -1
