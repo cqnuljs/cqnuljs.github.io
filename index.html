@@ -395,7 +395,7 @@
                 
               
 
-              <time title="创建时间：2019-03-23 12:23:50 / 修改时间：12:33:11" itemprop="dateCreated datePublished" datetime="2019-03-23T12:23:50+08:00">2019-03-23</time>
+              <time title="创建时间：2019-03-23 12:23:50 / 修改时间：12:35:11" itemprop="dateCreated datePublished" datetime="2019-03-23T12:23:50+08:00">2019-03-23</time>
             
 
             
@@ -452,25 +452,16 @@
 
       
         
+          <h1 id="教学内容"><a href="#教学内容" class="headerlink" title="教学内容"></a>教学内容</h1><p>整数分解；<br>复合（赋值）运算符；<br>自增、自减运算符；</p>
+          <!--noindex-->
           
-            <h1 id="教学内容"><a href="#教学内容" class="headerlink" title="教学内容"></a>教学内容</h1><p>整数分解；<br>复合（赋值）运算符；<br>自增、自减运算符；</p>
-<h1 id="教学目标"><a href="#教学目标" class="headerlink" title="教学目标"></a>教学目标</h1><p>学生掌握整数分解；<br>学生掌握复合运算符和自增、减运算符；</p>
-<h1 id="重难点"><a href="#重难点" class="headerlink" title="重难点"></a>重难点</h1><p>自增和自减的前操作符和后操作符的关系</p>
-<h1 id="课前准备"><a href="#课前准备" class="headerlink" title="课前准备"></a>课前准备</h1><p>巩固知识点，复习习题</p>
-<h1 id="教学过程"><a href="#教学过程" class="headerlink" title="教学过程"></a>教学过程</h1><h1 id="引入课题"><a href="#引入课题" class="headerlink" title="引入课题"></a>引入课题</h1><h1 id="讲授新课"><a href="#讲授新课" class="headerlink" title="讲授新课"></a>讲授新课</h1><h2 id="分解整数"><a href="#分解整数" class="headerlink" title="分解整数"></a>分解整数</h2><p>任意一个整数对10求余是得到个位；<br>任意一个整数对10求商是丢掉个位；  </p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">123</span>;</span><br><span class="line">a%<span class="number">10</span>;  <span class="comment">//得到个位3</span></span><br><span class="line">a/<span class="number">10</span>; <span class="comment">//丢掉个位3变成12</span></span><br></pre></td></tr></table></figure>
-<p>反转3位数实例</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; n%<span class="number">10</span> &lt;&lt; n/<span class="number">10</span>%<span class="number">10</span> &lt;&lt; n/<span class="number">10</span>/<span class="number">10</span>%<span class="number">10</span>;</span><br></pre></td></tr></table></figure>
-<h2 id="累加器"><a href="#累加器" class="headerlink" title="累加器"></a>累加器</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> sum=<span class="number">0</span>,i=<span class="number">1</span>;</span><br><span class="line">sum=sum+i;    </span><br><span class="line"><span class="comment">//先取出sum的值加1，然后用该结果覆盖原先的sum，最终sum变成1.</span></span><br></pre></td></tr></table></figure>
-<p>同理，c++支持累减、累乘、累除；</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> sum=<span class="number">10</span>,i=<span class="number">2</span>;</span><br><span class="line">sum = sum-i;  <span class="comment">// sum=8</span></span><br><span class="line">sum = sum*i;  <span class="comment">// sum=20;</span></span><br><span class="line">sum = sum/i;  <span class="comment">// sum=5;</span></span><br></pre></td></tr></table></figure>
-<h1 id="赋值（复合）运算符"><a href="#赋值（复合）运算符" class="headerlink" title="赋值（复合）运算符"></a>赋值（复合）运算符</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sum += i;  <span class="comment">//等价于sum = sum+i;</span></span><br><span class="line">sum -= i;  <span class="comment">//等价于sum = sum-i;</span></span><br><span class="line">sum *= i;  <span class="comment">//等价于sum = sum*i;</span></span><br><span class="line">sum /= i;  <span class="comment">//等价于sum = sum/i;</span></span><br><span class="line"></span><br><span class="line">sum = i;</span><br><span class="line"><span class="comment">//赋值运算符，把右边操作数的值赋给左边操作数</span></span><br></pre></td></tr></table></figure>
-<h2 id="自增、自减运算符"><a href="#自增、自减运算符" class="headerlink" title="自增、自减运算符"></a>自增、自减运算符</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> sum=<span class="number">2</span>;</span><br><span class="line">sum++;  <span class="comment">//sum=sum+1,sum=3</span></span><br><span class="line">sum--;  <span class="comment">//sum=sum-1,sum=1</span></span><br><span class="line">++sum;  <span class="comment">//sum=sum+1,sum=3</span></span><br><span class="line">--sum;  <span class="comment">//sum=sum-1,sum=1</span></span><br></pre></td></tr></table></figure>
-<p>注：++sum会立即加+1，而sum++会在本条语句执行完毕后加1。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> sum=<span class="number">2</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; sum++; <span class="comment">//sum=2</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; sum;   <span class="comment">//sum=3</span></span><br><span class="line"></span><br><span class="line">sum=<span class="number">2</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt;++sum; <span class="comment">//sum=3</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; sum;  <span class="comment">//sum=3</span></span><br></pre></td></tr></table></figure>
-<h1 id="课堂小结"><a href="#课堂小结" class="headerlink" title="课堂小结"></a>课堂小结</h1><h1 id="课后反思"><a href="#课后反思" class="headerlink" title="课后反思"></a>课后反思</h1><p>是否关照到每位同学<br>多关心学生家庭作业完成情况</p>
-
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/03/23/第三课-运算符/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           
+          <!--/noindex-->
         
       
     </div>
