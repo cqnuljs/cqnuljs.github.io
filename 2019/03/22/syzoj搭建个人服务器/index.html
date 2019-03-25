@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="云服务快到期了，穷，没钱，所以就打起自己的大学时期的旧电脑，想把它作为代替云服务的替代品，中间过程坎坷，多亏本人的坚持和loj各位群友的帮助，在此谢过~  --前记">
+  <meta name="description" content="云服务快到期了，穷，没钱，所以就打起自己的大学时期的旧电脑，想把它作为代替云服务的替代品，中间过程坎坷，多亏本人的坚持和loj各位群友的帮助，在此谢过~  --前记 &amp;lt; —！more —&amp;gt; 修改源码只能自己查看自己的代码先登录root用户，避免文件权限问题。  打开提交页面的js文件  在控制台中输入一下命令: 12cd /opt/syzoj/web/modules/vi submis">
 <meta name="keywords" content="技术 syzoj">
 <meta property="og:type" content="article">
 <meta property="og:title" content="syzoj搭建个+个人服务器">
 <meta property="og:url" content="http://yoursite.com/2019/03/22/syzoj搭建个人服务器/index.html">
 <meta property="og:site_name" content="有志者，事竟成！">
-<meta property="og:description" content="云服务快到期了，穷，没钱，所以就打起自己的大学时期的旧电脑，想把它作为代替云服务的替代品，中间过程坎坷，多亏本人的坚持和loj各位群友的帮助，在此谢过~  --前记">
+<meta property="og:description" content="云服务快到期了，穷，没钱，所以就打起自己的大学时期的旧电脑，想把它作为代替云服务的替代品，中间过程坎坷，多亏本人的坚持和loj各位群友的帮助，在此谢过~  --前记 &amp;lt; —！more —&amp;gt; 修改源码只能自己查看自己的代码先登录root用户，避免文件权限问题。  打开提交页面的js文件  在控制台中输入一下命令: 12cd /opt/syzoj/web/modules/vi submis">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-22T15:19:02.753Z">
+<meta property="og:updated_time" content="2019-03-25T03:36:03.772Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="syzoj搭建个+个人服务器">
-<meta name="twitter:description" content="云服务快到期了，穷，没钱，所以就打起自己的大学时期的旧电脑，想把它作为代替云服务的替代品，中间过程坎坷，多亏本人的坚持和loj各位群友的帮助，在此谢过~  --前记">
+<meta name="twitter:description" content="云服务快到期了，穷，没钱，所以就打起自己的大学时期的旧电脑，想把它作为代替云服务的替代品，中间过程坎坷，多亏本人的坚持和loj各位群友的帮助，在此谢过~  --前记 &amp;lt; —！more —&amp;gt; 修改源码只能自己查看自己的代码先登录root用户，避免文件权限问题。  打开提交页面的js文件  在控制台中输入一下命令: 12cd /opt/syzoj/web/modules/vi submis">
 
 
 
@@ -397,12 +397,24 @@
                 
               
 
-              <time title="创建时间：2019-03-22 22:57:06 / 修改时间：23:19:02" itemprop="dateCreated datePublished" datetime="2019-03-22T22:57:06+08:00">2019-03-22</time>
+              <time title="创建时间：2019-03-22 22:57:06" itemprop="dateCreated datePublished" datetime="2019-03-22T22:57:06+08:00">2019-03-22</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-25 11:36:03" itemprop="dateModified" datetime="2019-03-25T11:36:03+08:00">2019-03-25</time>
               
             
           </span>
@@ -454,6 +466,19 @@
 
       
         <p>云服务快到期了，穷，没钱，所以就打起自己的大学时期的旧电脑，想把它作为代替云服务的替代品，中间过程坎坷，多亏本人的坚持和loj各位群友的帮助，在此谢过~<br> </p><p align="right"> --前记</p><p></p>
+<p>&lt; —！more —&gt;</p>
+<h1 id="修改源码只能自己查看自己的代码"><a href="#修改源码只能自己查看自己的代码" class="headerlink" title="修改源码只能自己查看自己的代码"></a>修改源码只能自己查看自己的代码</h1><p>先登录<code>root</code>用户，避免文件权限问题。</p>
+<ol>
+<li>打开提交页面的js文件</li>
+</ol>
+<p>在控制台中输入一下命令:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/syzoj/web/modules/</span><br><span class="line">vi submission.js</span><br></pre></td></tr></table></figure>
+<ol>
+<li>添加代码</li>
+</ol>
+<p>在submission.js文件的第139行<del>137后也行</del>输入如下代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> ( curUser.id != judge.user_id ) &#123;</span><br><span class="line">     <span class="keyword">throw</span> <span class="built_in">Error</span>(<span class="string">"您只能查看自己的代码！"</span>,);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<p>这样子就可以了！！！<br>感谢@MikuNotFoundException（i@ytbolg.net）的帮助。<br>ps : curUser.id 是当前登录的用户的id， judge.user_id 是提交记录的用户id。 </p>
 
       
     </div>
@@ -547,8 +572,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -632,6 +666,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#修改源码只能自己查看自己的代码"><span class="nav-number">1.</span> <span class="nav-text">修改源码只能自己查看自己的代码</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
