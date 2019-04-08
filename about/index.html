@@ -96,17 +96,17 @@
 
 
 
-  <meta name="description" content="const ap = new APlayer({    container: document.getElementById(‘aplayer’),    audio: [{        name: ‘name’,        artist: ‘artist’,        url: “http://kkcpp.club/Shakira_-_Try_Everything.ncm”,">
+  <meta name="description" content="#aplayer {  width: 50%;  margin: 0 auto;  }  @media screen and (max-device-width: 400px) {  #aplayer {  width: 100%;  }  }        const app = new APlayer({  container: document.getElementById(&apos;aplay">
 <meta property="og:type" content="website">
 <meta property="og:title" content="about">
 <meta property="og:url" content="http://yoursite.com/about/index.html">
 <meta property="og:site_name" content="有志者，事竟成！">
-<meta property="og:description" content="const ap = new APlayer({    container: document.getElementById(‘aplayer’),    audio: [{        name: ‘name’,        artist: ‘artist’,        url: “http://kkcpp.club/Shakira_-_Try_Everything.ncm”,">
+<meta property="og:description" content="#aplayer {  width: 50%;  margin: 0 auto;  }  @media screen and (max-device-width: 400px) {  #aplayer {  width: 100%;  }  }        const app = new APlayer({  container: document.getElementById(&apos;aplay">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-08T04:04:58.478Z">
+<meta property="og:updated_time" content="2019-04-08T04:18:46.050Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="about">
-<meta name="twitter:description" content="const ap = new APlayer({    container: document.getElementById(‘aplayer’),    audio: [{        name: ‘name’,        artist: ‘artist’,        url: “http://kkcpp.club/Shakira_-_Try_Everything.ncm”,">
+<meta name="twitter:description" content="#aplayer {  width: 50%;  margin: 0 auto;  }  @media screen and (max-device-width: 400px) {  #aplayer {  width: 100%;  }  }        const app = new APlayer({  container: document.getElementById(&apos;aplay">
 
 
 
@@ -386,11 +386,34 @@
       <div class="post-body">
         
         
-          <p><link rel="stylesheet" href="APlayer.min.css"></p>
-<p><div id="aplayer"></div></p>
-<script src="APlayer.min.js"></script>
+          <style>
+ #aplayer {
+ width: 50%;
+ margin: 0 auto;
+ }
+ @media screen and (max-device-width: 400px) {
+ #aplayer {
+ width: 100%;
+ }
+ }
+</style>
 
-<p>const ap = new APlayer({<br>    container: document.getElementById(‘aplayer’),<br>    audio: [{<br>        name: ‘name’,<br>        artist: ‘artist’,<br>        url: “<a href="http://kkcpp.club/Shakira_-_Try_Everything.ncm”" target="_blank" rel="noopener">http://kkcpp.club/Shakira_-_Try_Everything.ncm”</a>,<br>        cover: ‘cover.jpg’<br>    }]<br>})</p>
+<p><link rel="stylesheet" href="/assets/css/APlayer.min.css"></p>
+<p><div id="aplayer"></div></p>
+<script src="/assets/js/APlayer.min.js"></script>
+
+<script>
+const app = new APlayer({
+ container: document.getElementById('aplayer'),
+ audio: [{
+ name: '丑八怪',                          <!-- 歌曲名称-->
+ artist: '薛之谦',                        <!-- 歌曲作者-->
+ url: '/resources/music/丑八怪.mp3',      <!-- 歌曲路径-->
+ cover: '/resources/music/认真的雪.jpg',  <!-- 歌曲封面图片-->
+ theme: '#46718b'                        <!-- 选中歌曲的主题-->
+ }]
+});
+</script>
 
         
       </div>
